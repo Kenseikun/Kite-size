@@ -1,4 +1,5 @@
 $font: 'Montserrat Alternates', sans-serif;
+$fcol: white;
 
 *{
     margin: 0;
@@ -32,7 +33,7 @@ body{
 
 .search-box{
     width: 100%;
-    margin: 0 0 75px;
+    margin: 0 0 60px;
 }
 
 .search-box .search-bar{
@@ -57,3 +58,45 @@ body{
     }
 }
 
+.location-box{
+    .location{
+        color: $fcol;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 3px 3px rgba(50,50,70,0.5);
+        text-transform: uppercase;
+    }
+    .date{
+        color: $fcol;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.weather-box{
+text-align: center;
+    .temp{
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 16px;
+
+    padding: 15px 25px;
+
+    color: $fcol;
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(50,50,70,0.5);
+    text-align: center;
+    box-shadow: 3px 6px (0,0,0,0.2);
+    }
+    .weather{
+        color: $fcol;
+        font-size: 40px;
+        font-weight: 700;
+        text-shadow: 3px 3px rgba(50,50,70,0.5);
+    }
+}
