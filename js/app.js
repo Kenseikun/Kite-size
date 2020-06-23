@@ -43,7 +43,7 @@ const App = () => {
 
     let arrowStyle = {
         color: 'green',
-        // transform: `rotate(${weather.wind.deg})`
+        transform: weather.wind === undefined ? "0deg" : `rotate(-${weather.wind.deg}deg)`
     }
 
     return (
@@ -73,7 +73,7 @@ const App = () => {
                             <p className="north">N</p>
                             <div className="wind" style={arrowStyle}><i className="arrow fas fa-arrow-right"></i></div>
                         </div>
-                        <p>{weather.wind.deg} deg</p>
+                        <p className="south">S</p>
                     </div>
                 ) : ('')}
             </main>

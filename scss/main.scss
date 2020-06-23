@@ -1,5 +1,15 @@
 $font: 'Montserrat Alternates', sans-serif;
+$fontSec: 'Faster One', cursive;
 $fcol: white;
+
+@mixin windDirection {
+    font-family: $font;
+    text-transform: uppercase;
+    color: red;
+    font-size: 1.4em;
+    text-align: center;
+    font-family: $fontSec;
+}
 
 *{
     margin: 0;
@@ -93,7 +103,7 @@ text-align: center;
     display: inline-block;
     margin: 30px auto;
     background-color: rgba(255,255,255,0.2);
-    border-radius: 16px;
+
 
     padding: 15px 25px;
 
@@ -112,14 +122,7 @@ text-align: center;
     }
 }
 
-.north{
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-color: red;
-font-size: 1.2em;
-
-}
-p{
-    color: white;
-    font-size: 50px;
+.north,
+.south{
+   @include windDirection
 }
