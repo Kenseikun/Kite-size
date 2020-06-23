@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import '../scss/main.scss';
+import '../scss/main.scss'
+import shaka from '../images/shaka.svg'
 
 const api = {
     key: "29dc34babeac1dbc1c3403ac23b711fb",
@@ -27,12 +28,6 @@ const App = () => {
         }
     }
 
-    let arrowStyle = {
-        color: 'yellow',
-        transform: 'rotate({weather.wind.speed})',
-
-    }
-
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -46,6 +41,10 @@ const App = () => {
         return `${day} - ${date} - ${month} - ${year}`
     }
 
+    let arrowStyle = {
+        color: 'green',
+        // transform: `rotate(${weather.wind.deg})`
+    }
 
     return (
         <div className="app">
@@ -53,11 +52,13 @@ const App = () => {
                 <div className="search-box">
                     <input type="text"
                         className="search-bar"
-                        placeholder="Search..."
+                        placeholder="Search your spot..."
                         onChange={e => setQuery(e.target.value)}
                         value={query}
-                        onKeyPress={search}>
+                        onKeyPress={search}
+                    >
                     </input>
+                    <img className="shaka" src={shaka}></img>
                 </div>
                 {(typeof weather.main != "undefined") ? (
                     <div>
@@ -69,13 +70,17 @@ const App = () => {
                             <div className="temp">
                                 {Math.round(weather.main.temp)}°c
                                 </div>
+                            <p className="north">N</p>
                             <div className="wind" style={arrowStyle}><i className="arrow fas fa-arrow-right"></i></div>
                         </div>
+                        <p>{weather.wind.deg} deg</p>
                     </div>
                 ) : ('')}
             </main>
         </div>
     )
 }
+
+
 
 ReactDOM.render(<App />, document.getElementById("app"));
