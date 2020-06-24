@@ -42,7 +42,6 @@ const App = () => {
     }
 
     let arrowStyle = {
-        color: 'green',
         transform: weather.wind === undefined ? "0deg" : `rotate(-${weather.wind.deg}deg)`
     }
 
@@ -67,13 +66,22 @@ const App = () => {
                             <div className="date">{dateBuilder(new Date())}</div>
                         </div>
                         <div className="weather-box">
+                            <h1 className="size-info">What kite should I use?</h1>
+
                             <div className="temp">
-                                {Math.round(weather.main.temp)}°c
-                                </div>
-                            <p className="north">N</p>
-                            <div className="wind" style={arrowStyle}><i className="arrow fas fa-arrow-right"></i></div>
+                                {Math.round(weather.main.temp / 10)}°c
+                            </div>
+
+                            <div className="temp">
+                                {Math.round(weather.main.temp / 10)}°c
+                            </div>
+
+                            <div className="direction-box">
+                                <p className="north">N</p>
+                                <div className="wind" style={arrowStyle}><i class="arrow fas fa-location-arrow"></i></div>
+                            </div>
+                            <p className="south">S</p>
                         </div>
-                        <p className="south">S</p>
                     </div>
                 ) : ('')}
             </main>

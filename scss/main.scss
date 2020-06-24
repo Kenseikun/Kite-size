@@ -1,14 +1,15 @@
-$font: 'Montserrat Alternates', sans-serif;
-$fontSec: 'Faster One', cursive;
+$font: 'Roboto', sans-serif;
+$fontSec: 'Open Sans', sans-serif;
 $fcol: white;
 
 @mixin windDirection {
-    font-family: $font;
     text-transform: uppercase;
     color: red;
     font-size: 1.4em;
     text-align: center;
     font-family: $fontSec;
+    font-weight: bold;
+    padding: 10px;
 }
 
 *{
@@ -98,10 +99,16 @@ body{
 
 .weather-box{
 text-align: center;
+
+    .size-info{
+    margin-top: 15px;
+    font-size: 1em;
+    color: orangered;
+}
     .temp{
     position: relative;
     display: inline-block;
-    margin: 30px auto;
+    margin: 5px auto;
     background-color: rgba(255,255,255,0.2);
 
 
@@ -114,15 +121,51 @@ text-align: center;
     text-align: center;
     box-shadow: 3px 6px (0,0,0,0.2);
     }
+    
+    .direction-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     .wind{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: $fcol;
         font-size: 40px;
-        font-weight: 700;
-        text-shadow: 3px 3px rgba(50,50,70,0.5);
+        font-weight: 300;
+        border: 2px dashed red;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+
+        .arrow{
+            animation: arrow 5s linear infinite;
+            padding: 10px;
+            color:yellow;
+            
+        }
     }
 }
 
 .north,
 .south{
    @include windDirection
+}
+}
+
+@keyframes arrow {
+    0%{transform: rotate(0deg);}
+
+    25%{
+        transform: rotate(-10deg);
+    }
+    50%{transform: rotate(10deg)}
+    
+    75%{
+        transform: rotate(-10deg);
+    }
+
+    100%{transform: rotate(0deg)}
 }
