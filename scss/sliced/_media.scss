@@ -1,0 +1,56 @@
+@media (min-width: 375px){
+    .weather-box{
+      
+        .knots{
+            margin-top: 2px;
+           font-size: 1.2em;
+        }
+        
+        .temp{
+            font-size: 1.2em;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .app{
+      max-width: 768px;
+      max-height: 100vh;
+    //   background-image: url(../../images/Wawe.jpg);
+  }
+
+  .search-box{
+      .search-bar{
+          margin: 0 auto;
+          width: 70%;
+      }
+      .shaka{
+          top: 0px;
+          right: 15%;}
+  }
+
+  .weather-box{
+    
+    position: relative;
+       
+    .size-info{
+        font-size: 2em;
+        
+        span{
+        font-size: 1.5em;}
+    }
+    .knots{
+       position: absolute;
+       bottom: 15%;
+       left:10%;
+       font-size:3em;
+    }
+    
+    .temp{
+        position: absolute;
+        bottom: 15%;
+        right: 20%;
+        font-size: 2.5em;
+    }
+}
+}

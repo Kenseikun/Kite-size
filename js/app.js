@@ -45,38 +45,34 @@ const App = () => {
         transform: weather.wind === undefined ? "0deg" : `rotate(-${weather.wind.deg}deg)`
     }
 
-    // const kiteSize = () => {
-    //     if (weather.wind.speed < 10) {
-    //         return "Too low"
-    //     }
-    //     else if (weather.wind.speed >= 10 && weather.wind.speed < 12) {
-    //         return 17
-    //     }
-    //     else if (weather.wind.speed >= 12 && weather.wind.speed < 17) {
-    //         return 14
-    //     }
-    //     else if (weather.wind.speed >= 17 && weather.wind.speed < 21) {
-    //         return 12
-    //     }
-    //     else if (weather.wind.speed >= 21 && weather.wind.speed < 24) {
-    //         return 9
-    //     }
-    //     else if (weather.wind.speed >= 24) {
-    //         return 7
-    //     }
-    //     else {
-    //         return "Stay at home!"
-    //     }
-    // }
-
     const kiteSize = () => {
-        if (Math.round(weather.wind.speed) < 4) {
+        if (weather.wind.speed === undefined) {
+            return "no data.."
+        }
+        else if (weather.wind.speed < 10) {
             return "Too low"
         }
+        else if (weather.wind.speed >= 10 && weather.wind.speed < 12) {
+            return 17
+        }
+        else if (weather.wind.speed >= 12 && weather.wind.speed < 17) {
+            return 14
+        }
+        else if (weather.wind.speed >= 17 && weather.wind.speed < 21) {
+            return 12
+        }
+        else if (weather.wind.speed >= 21 && weather.wind.speed < 24) {
+            return 9
+        }
+        else if (weather.wind.speed >= 24) {
+            return 7
+        }
         else {
-            return 20
+            return "Stay at home!"
         }
     }
+
+
 
     return (
         <div className="app">
@@ -95,7 +91,7 @@ const App = () => {
                 {(typeof weather.main != "undefined") ? (
                     <div>
                         <div className="location-box">
-                            <div className="location">{weather.name}</div>
+                            <div className="location">{weather.name},  {weather.sys.country}</div>
                             <div className="date">{dateBuilder(new Date())}</div>
                         </div>
                         <div className="weather-box">
