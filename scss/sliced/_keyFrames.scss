@@ -1,0 +1,31 @@
+
+@keyframes arrow {
+    0%{transform: rotate(0deg);}
+
+    25%{
+        transform: rotate(-10deg);
+    }
+    50%{transform: rotate(10deg)}
+    
+    75%{
+        transform: rotate(-10deg);
+    }
+
+    100%{transform: rotate(0deg)}
+}
+
+@keyframes shaka {
+    0%{transform: rotate(45deg);}
+    
+    91%{transform: rotate(45deg);}
+    92%{transform: rotate(-20deg);}
+    93%{transform: rotate(45deg);}
+    94%{transform: rotate(-20deg);}
+    95%{transform: rotate(45deg);}
+    96%{transform: rotate(-20deg);}
+    97%{transform: rotate(45deg);}
+    98%{transform: rotate(-20deg);}
+    99%{transform: rotate(45deg);}
+    100%{transform: rotate(45deg);}
+    
+}

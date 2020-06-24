@@ -1,0 +1,9 @@
+@mixin windDirection {
+    text-transform: uppercase;
+    color: red;
+    font-size: 1.4em;
+    text-align: center;
+    font-family: $fontSec;
+    font-weight: bold;
+    padding: 10px;
+}

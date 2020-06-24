@@ -1,0 +1,102 @@
+
+.location-box{
+    .location{
+        color: $fcol;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 3px 3px rgba(50,50,70,0.5);
+        text-transform: uppercase;
+    }
+    .date{
+        color: $fcol;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.weather-box{
+text-align: center;
+
+    .size-info{
+    margin: 15px 0 10px 0;
+    font-size: 1.6em;
+    color: orange;
+    
+    span{
+    color: orangered;
+    text-transform: uppercase;
+    font-size: 1.1em;}
+}
+    .kite-size{
+    position: relative;
+    display: inline-block;
+    margin:10px 0 5px 0;
+    background-color: rgba(255,255,255,0.2);
+
+
+    padding: 15px 25px;
+
+    color: $fcol;
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(50,50,70,0.5);
+    text-align: center;
+    box-shadow: 3px 6px (0,0,0,0.2);
+    }
+
+    .temp{
+        font-size: 2em;
+        color: $fcol;
+        margin-top: 15px;
+    }
+    
+    .direction-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    .wind{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $fcol;
+        font-size: 40px;
+        font-weight: 300;
+        border: 3px dashed red;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+
+        .arrow{
+            animation: arrow 5s linear infinite;
+            padding: 10px;
+            color:yellow;
+            font-size: 1.3em;
+            
+        }
+    }
+}
+
+.knots{
+    font-size: 1.5em;
+    color: $fcol;
+    margin: 10px 0;
+}
+
+.north,
+.south{
+   @include windDirection
+}
+
+.north{
+    font-size: 2em;
+}
+.south{
+    padding: 10px 40px;
+    color: white;
+}
+}
