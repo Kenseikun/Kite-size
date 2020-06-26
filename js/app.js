@@ -45,26 +45,32 @@ const App = () => {
         transform: weather.wind === undefined ? "0deg" : `rotate(-${weather.wind.deg}deg)`
     }
 
+
+
     const kiteSize = () => {
+
+
         if (weather.wind.speed === undefined) {
             return "no data.."
         }
-        else if (weather.wind.speed < 10) {
+        const speedSize = weather.wind.speed * 1.94
+
+        if (speedSize < 10) {
             return "Too low"
         }
-        else if (weather.wind.speed >= 10 && weather.wind.speed < 12) {
+        else if (speedSize >= 10 && speedSize < 12) {
             return 17
         }
-        else if (weather.wind.speed >= 12 && weather.wind.speed < 17) {
+        else if (speedSize >= 12 && speedSize < 17) {
             return 14
         }
-        else if (weather.wind.speed >= 17 && weather.wind.speed < 21) {
+        else if (speedSize >= 17 && speedSize < 21) {
             return 12
         }
-        else if (weather.wind.speed >= 21 && weather.wind.speed < 24) {
+        else if (speedSize >= 21 && speedSize < 24) {
             return 9
         }
-        else if (weather.wind.speed >= 24) {
+        else if (speedSize >= 24) {
             return 7
         }
         else {
@@ -94,6 +100,7 @@ const App = () => {
                             <div className="location">{weather.name},  {weather.sys.country}</div>
                             <div className="date">{dateBuilder(new Date())}</div>
                         </div>
+
                         <div className="weather-box">
                             <h1 className="size-info">What <span>kite</span> should I use?</h1>
 
@@ -103,16 +110,25 @@ const App = () => {
 
                             <div className="direction-box">
                                 <p className="north">N</p>
-                                <div className="wind" style={arrowStyle}><i class="arrow fas fa-location-arrow"></i></div>
+
+                                <div className="wind-box">
+
+                                    <div className="temp">
+                                        {Math.round(weather.main.temp / 10)}°c
+                                     </div>
+
+                                    <div className="wind" style={arrowStyle}><i className="arrow fas fa-location-arrow"></i></div>
+
+                                    <p className="knots">{Math.round(weather.wind.speed * 1.94)} kn</p>
+                                </div>
+
+                                <p className="south">S</p>
                             </div>
 
-                            <p className="south">S</p>
 
-                            <p className="knots">{Math.round(weather.wind.speed * 1.94)} knots</p>
 
-                            <div className="temp">
-                                {Math.round(weather.main.temp / 10)}°c
-                            </div>
+
+
                         </div>
                     </div>
                 ) : ('')}
