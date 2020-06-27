@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../scss/main.scss'
 import shaka from '../images/shaka.svg'
 import { Link } from 'react-router-dom';
-import { useLocalState } from './locHook'
+import { useLocalState } from './locHook';
 
 const api = {
     key: "29dc34babeac1dbc1c3403ac23b711fb",
@@ -49,6 +49,9 @@ export const Main = () => {
     }
 
 
+    let locStorage = { wage };
+    console.log(locStorage);
+
 
     const kiteSize = () => {
 
@@ -62,19 +65,19 @@ export const Main = () => {
             return "Too low"
         }
         else if (speedSize >= 10 && speedSize < 12) {
-            return 17
+            return (12 + parseInt(locStorage));
         }
         else if (speedSize >= 12 && speedSize < 17) {
-            return 14
+            return (14 + parseInt(locStorage));
         }
         else if (speedSize >= 17 && speedSize < 21) {
-            return 12
+            return (12 + parseInt(locStorage));
         }
         else if (speedSize >= 21 && speedSize < 24) {
-            return 9
+            return (9 + parseInt(locStorage));
         }
         else if (speedSize >= 24) {
-            return 7
+            return (7 + parseInt(locStorage));
         }
         else {
             return "Stay at home!"
@@ -96,7 +99,7 @@ export const Main = () => {
                 </input>
                 <img className="shaka" src={shaka}></img>
                 <Link to="/">
-                    <button className="main-btn__back"><i class="fas fa-arrow-alt-circle-left"></i></button>
+                    <button className="main-btn__back"><i className="return-arrow fas fa-arrow-alt-circle-left"></i></button>
                 </Link>
 
             </div>
