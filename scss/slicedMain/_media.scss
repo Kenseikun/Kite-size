@@ -1,0 +1,55 @@
+
+
+@media (min-width: 768px) {
+    body{
+        display: flex;
+        justify-content: flex-end;
+        background-image: url(/images/Wawe.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .app{
+      width: 700px;
+      max-height: 100vh;
+      box-shadow: 0px 0px 39px -3px rgba(0,0,0,0.75);
+      margin: 0 40px 0 0px;
+        }
+    }
+  
+    .search-box{
+        margin: 0 auto 20px auto;
+        width: 85%;
+               
+        .search-bar{
+        
+            padding: 20px;}
+    }
+
+
+    .location-box{
+        .location{
+            
+            font-size: 28px;
+            
+        }
+        .date{
+            
+            font-size: 24px;
+                }
+    }
+
+.weather-box{    
+   .direction-box{
+        .wind-box{
+            justify-content: space-around;
+            .wind{
+            border: 1px solid red;
+            width: 150px;
+            height: 150px;
+            border: 4px dashed red;
+        }
+    }
+}
+}

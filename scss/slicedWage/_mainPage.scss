@@ -1,0 +1,68 @@
+.main-weight__container{
+    display: flex;
+    flex-direction: column;
+
+    height: 90vh;
+    text-align: center;
+    align-items: center;
+   
+    .main-weight{
+        margin: 20px auto;
+        font-size: 2.5em;
+        color: orange;
+        font-weight: 500;
+    }
+
+    .main-btn__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        margin-top: 20px;
+        .btn_wages{
+            padding: 10px 20px;
+            margin: 20px 5px;
+            color: $fcol;
+            background-color: rgba(22, 8, 83, 0.2);
+            
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(22, 8, 83, 0.5);
+            }
+        }
+    }
+
+    p{
+    color: red;
+    font-weight: bold;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+    margin-top: 10px;
+    }
+    .main-btn__check{
+        padding: 35px 80px;
+        margin: 30px auto;
+        text-align: center;
+        border: none;
+        color: $fcol;
+        font-size: 1.5em;
+        border-radius: 5px;
+        background-color: rgb(81, 81, 224);
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(81, 81, 224,0.5);
+        }
+    }
+    .surfing{
+        width: 30%;
+        margin-top: 30px;
+        animation: surfer 10s linear infinite;
+    }
+}
+
+@keyframes surfer{
+    0%{transform: rotate(0);}
+25%{transform: rotate(-15deg);}
+50%{transform: rotate(5deg);}
+75%{transform: rotate(-15deg);}
+100%{transform: rotate(0);}
+}

@@ -1,10 +1,14 @@
-@import '../scss/sliced/variables';
-@import '../scss/sliced/mixin';
-@import '../scss/sliced/reset';
-@import '../scss/sliced/app';
-@import '../scss/sliced/searchBox';
-@import '../scss/sliced/mainPart.scss';
+@import '../scss/slicedMain/variables';
+@import '../scss/slicedMain/mixin';
+@import '../scss/slicedMain/reset';
 
-@import '../scss/sliced/keyFrames';
-@import '../scss/sliced/media';
+@import '../scss/slicedMain/app';
+
+@import '../scss/slicedWage/mainPage';
+
+@import '../scss/slicedMain/searchBox';
+@import '../scss/slicedMain/mainPart.scss';
+
+@import '../scss/slicedMain/keyFrames';
+@import '../scss/slicedMain/media';
 

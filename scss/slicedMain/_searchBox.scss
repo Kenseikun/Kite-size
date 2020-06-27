@@ -36,4 +36,18 @@
 
         animation: shaka 5s linear infinite both;
     }
+    .main-btn__back{
+        position: absolute;
+        top:0%;
+        left:-10%;
+        // transform: translateY(-50%);
+        border:none;
+        background-color: transparent;
+        font-size: 1.5em;
+        color: #ff4500;
+        margin: 5px 0 0 0;
+        &:hover{
+            color: rgba(255,69,0,0.5);
+        }
+    }
 }
