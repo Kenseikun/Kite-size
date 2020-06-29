@@ -1,4 +1,42 @@
+@media (min-width: 576px) { 
+    .main-weight__container{
+         
+        .main-weight{
+            font-size: 3.4em;
+                   
+        }
+    }
 
+    .main-weight__container{   
+        .main-btn__container{
+     
+            .btn_wages{
+            padding: 20px 40px;
+            margin: 0 10px 10px 10px;
+            } 
+        }
+
+        p{
+            font-size: 1.8em;
+            }
+
+        .surfing{
+                width: 25%;
+                margin-top: 10px;
+                           }
+    }
+}
+
+
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
 
 @media (min-width: 768px) {
     body{

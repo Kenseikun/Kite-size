@@ -49,7 +49,8 @@ export const Main = () => {
     }
 
 
-    let locStorage = { wage };
+    // let locStorage = JSON.parse({ wage });
+    let locStorage = ({ wage })
     console.log(locStorage);
 
 
