@@ -27,16 +27,20 @@
     }
 }
 
-
-
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
-
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
+.weather-box{
+    text-align: center;
+    
+        .size-info{
+        margin: 15px 0 10px 0;
+        font-size: 2em;
+        color: orange;
+        
+        span{
+        color: orangered;
+        text-transform: uppercase;
+        font-size: 1.3em;}
+    }
+}
 
 @media (min-width: 768px) {
     body{
@@ -75,7 +79,7 @@
         .date{
             
             font-size: 24px;
-                }
+            }
     }
 
 .weather-box{    
@@ -87,7 +91,7 @@
             width: 150px;
             height: 150px;
             border: 4px dashed red;
+            }
         }
     }
-}
 }

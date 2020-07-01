@@ -13,7 +13,7 @@ const api = {
 export const Main = () => {
 
 
-    const [wage, setWages] = useLocalState('wage');
+    const [wage, setWages] = useLocalState(wage);
 
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
@@ -25,7 +25,7 @@ export const Main = () => {
                 .then(result => {
                     setWeather(result);
                     setQuery('');
-                    console.log(result);
+                    // console.log(result);
 
                 });
         }
@@ -42,6 +42,7 @@ export const Main = () => {
         let year = d.getFullYear();
 
         return `${day} - ${date} - ${month} - ${year}`
+
     }
 
     let arrowStyle = {
@@ -49,9 +50,10 @@ export const Main = () => {
     }
 
 
-    // let locStorage = JSON.parse({ wage });
-    let locStorage = ({ wage })
-    console.log(locStorage);
+    let locStorage = (wage);
+    // console.log(locStorage);
+
+
 
 
     const kiteSize = () => {
