@@ -5,7 +5,7 @@
 * This app is using a wather API with the wind condition and calculate person wage to kite size.
 
 ## Technology
-![](images/filename%20reactLogo.png)
+<img src="images/images/reactLogo.png" height="100">
 
 ## Link Example
 [Coming soon...](404)
