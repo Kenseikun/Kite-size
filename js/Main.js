@@ -51,7 +51,7 @@ export const Main = () => {
 
 
     let locStorage = (wage);
-    // console.log(locStorage);
+    console.log(locStorage);
 
 
 
