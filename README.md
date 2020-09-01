@@ -6,6 +6,6 @@
 
 ## Technology
 <img src="images/reactLogo.png" height="100">
-
+<img src="images/sassLogo.png" height="100">
 ## Link Example
 [Coming soon...](404)
