@@ -23,14 +23,20 @@
             padding: 10px 20px;
             margin: 20px 5px;
             color: $fcol;
-            background-color: rgba(22, 8, 83, 0.2);
+            background-color: #16085333;
             
             cursor: pointer;
             &:hover{
-                background-color: rgba(22, 8, 83, 0.5);
+                background-color: #16085380;
             }
         }
+
+        .btnCheck{
+            background-color: #16085380;
+        }
     }
+
+    
 
     p{
     color: red;

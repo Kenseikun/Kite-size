@@ -7,12 +7,14 @@ import { useLocalState } from './locHook';
 
 export const Wages = () => {
 
-
+    const [click, setClick] = useState(false);
     const [wage, setWages] = useLocalState(wage);
 
-    const handleClick = (wage) => {
-        setWages(wage);
+
+    const handleClickTest = (click) => {
+        setClick(click);
     }
+
 
     return (
 
@@ -21,10 +23,26 @@ export const Wages = () => {
                 <h2 className="main-weight">Choose your weight</h2>
 
                 <div className="main-btn__container">
-                    <div className="btn_wages btnFirst" onClick={() => setWages(0)}>55kg</div>
-                    <div className="btn_wages btnSec" onClick={() => setWages(1)}>65kg</div>
-                    <div className="btn_wages btnThird" onClick={() => setWages(3)}>75kg</div>
-                    <div className="btn_wages btnFourth" onClick={() => setWages(4)}>85kg+</div>
+
+                    <div className={`btn_wages btnSec ${wage === 0 ? "btnCheck" : ""}`}
+                        onClick={() => {
+                            setWages(0);
+                        }}>55kg</div>
+
+                    <div className={`btn_wages btnSec ${wage === 1 ? "btnCheck" : ""}`}
+                        onClick={() => {
+                            setWages(1);
+                        }}>65kg</div>
+
+                    <div className={`btn_wages btnSec ${wage === 3 ? "btnCheck" : ""}`}
+                        onClick={() => {
+                            setWages(3);
+                        }}>75kg</div>
+
+                    <div className={`btn_wages btnSec ${wage === 4 ? "btnCheck" : ""}`}
+                        onClick={() => {
+                            setWages(4);
+                        }}>85kg+</div>
                 </div>
 
                 <p>&</p>

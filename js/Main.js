@@ -126,7 +126,7 @@ export const Main = () => {
                             <div className="wind-box">
 
                                 <div className="temp">
-                                    {Math.round(weather.main.temp / 10)}°c
+                                    {Math.round(((weather.main.temp / 10) - 32) / 1.8)}°c
                                      </div>
 
                                 <div className="wind" style={arrowStyle}><i className="arrow fas fa-location-arrow"></i></div>
