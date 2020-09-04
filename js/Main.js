@@ -9,7 +9,6 @@ const api = {
     base: "https://api.openweathermap.org/data/2.5/"
 }
 
-
 export const Main = () => {
 
 
@@ -49,10 +48,7 @@ export const Main = () => {
         transform: weather.wind === undefined ? "0deg" : `rotate(-${weather.wind.deg}deg)`
     }
 
-
     let locStorage = (wage);
-    console.log(locStorage);
-
 
 
 

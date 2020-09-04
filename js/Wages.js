@@ -4,17 +4,9 @@ import { Link } from 'react-router-dom';
 import surfing from '../images/surfing.svg';
 import { useLocalState } from './locHook';
 
-
 export const Wages = () => {
 
-    const [click, setClick] = useState(false);
     const [wage, setWages] = useLocalState(wage);
-
-
-    const handleClickTest = (click) => {
-        setClick(click);
-    }
-
 
     return (
 
